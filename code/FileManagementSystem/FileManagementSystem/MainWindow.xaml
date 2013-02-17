@@ -1,0 +1,67 @@
+﻿<Window x:Class="FileManagementSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="File Management System" Height="600" Width="800">
+    <DockPanel LastChildFill="True">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="file">
+                <MenuItem Header="Create Library" Name="createLibMenuItem" Click="createLibMenuItem_Click"></MenuItem>
+                <MenuItem Header="open"></MenuItem>
+                <MenuItem Header="save"></MenuItem>
+                <MenuItem Header="save as"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="view">
+                <MenuItem Header="full screen"></MenuItem>
+                <MenuItem Header="tool box"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="edit">
+                <MenuItem Header="copy"></MenuItem>
+                <MenuItem Header="cut"></MenuItem>
+                <MenuItem Header="undo"></MenuItem>
+                <MenuItem Header="redo"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="help">
+                <MenuItem Header="view help"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="tools">
+                <MenuItem Header="connect to data base"></MenuItem>
+                <MenuItem Header="connect to server"></MenuItem>
+                <MenuItem Header="mocros"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="window">
+                <MenuItem Header="close all document"></MenuItem>
+                <MenuItem Header="hide"></MenuItem>
+                <MenuItem Header="auto hide"></MenuItem>
+
+            </MenuItem>
+            <Separator></Separator>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="createLibMenuItem_Click">Create Library</Button>
+            <Separator></Separator>
+            <Button Name="importLibBtn" Click="importLibBtn_Click">Import Library</Button>
+            <Separator></Separator>
+            <Button Name="backupBtn" Click="backupBtn_Click">Backup</Button>
+            <Separator></Separator>
+            <Button>Refresh Library</Button>
+            <Separator></Separator>
+            <Button>Starred</Button>
+            <Separator></Separator>
+            <TextBox Background="Azure" Width="150" HorizontalContentAlignment="Center">Search files</TextBox>
+            <Separator></Separator>
+            <Button>Settings</Button>
+            <Separator></Separator>
+            <Button>Upload to Web</Button>
+        </ToolBar>
+        <StatusBar DockPanel.Dock="Bottom">
+            <Label>No files selected</Label>
+            <ProgressBar Width="200" Height="20"></ProgressBar>
+        </StatusBar>
+        <DockPanel DockPanel.Dock="Bottom">
+            <DockPanel Name="navigatorSideBar" DockPanel.Dock="Left" Width="200" Background="#FFF2D9D9"></DockPanel>
+            <TextBlock Height="200" DockPanel.Dock="Bottom" Name="informationBrowserTB"  Background="#FFB8EBB8">Information Browser</TextBlock>
+            <ListView Name="mainView" DockPanel.Dock="Top"></ListView>
+        </DockPanel>
+    </DockPanel>
+</Window>
+    
