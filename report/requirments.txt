@@ -1,0 +1,70 @@
+
+----------------------------------------------------------------------------------------------------------------------
+Requirements
+------------------------------------------------------------------------------------------------------------------------
+Create Folder tree (Display files In hierarchy) to dynamically display file system
+Browse drive, folder, library & files 
+Address bar to show current path and manually navigate to user entered path
+forward, back and Level up navigation through buttons
+Create and manage library
+create new folder,textfine,shortcut,MS word file, MS Excel File, MS PowerPoint File, MS Access File,ZIp/Rar File,Image (MS Paint)
+Edit textfile
+Preview images, textfile,pdf,videos,saved web pages
+Print textfile,Imge,Pdf
+Play Audio & video
+Rename single,multiple,wildcard,by groups,with sequence
+move,copy,delete single/multiple/wildcard/by groups
+Search/find by filename,size,date,type
+Metatag support
+Direct access tabs for  desktop,network folder,my computer , search result
+status bar to display selected Directory/File Size, Number of files in current directory, selected file's attribute, number of selected files
+Drag and drop features
+Splitting/merging files
+Latest accessed folder history.
+Undo/ Redo changes
+email file
+Find-as-you-type search
+Duplicate file detection
+File association support (e.g. default application to open)
+Provide icon view, compact view, detailed list view, and thumbnail view
+Quick device access buttons with automatic mounting and unmounting
+Applications/games menu virtual folder
+Branch (or 'flat') file view - see all files in an entire directory and subdirectories in one view
+Folder Bookmark
+Internal handling of ZIP, RAR, 7Zip etc  archive formats (browse them like folders).
+ZIP file modification on the fly
+modify file attributes, properties and file permissions
+Keyboard Shortcuts for different actions
+Tabbed interface to multiple folder content at once
+Synchronizing folders(local/remote)
+Password protect folders
+Network File Access (FTP,NFS etc)
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+future scope
+----------------------------------------------------------------------------------------------------------------------
+Files can be dragged among tabs
+Different file browsers: dual panel, classic windows explorer, command prompt
+Portable software
+Virtual cd/dvd drive
+Language support
+colour theme
+Integrated command line.
+SAMBA (Integrate with linux file system) access.
+
+
+
+
+
