@@ -1,0 +1,174 @@
+<Project>
+  <Name>fitnesstracker</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>FMSClassLibrary.dll</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>UserInfo</Name>
+        <Access>Public</Access>
+        <Location left="224" top="308" />
+        <Size width="289" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String userId</Member>
+        <Member type="Field">public String userName</Member>
+        <Member type="Field">public List&lt;StorageDeviceInfo&gt; deviceOwned</Member>
+        <Member type="Field">public List&lt;FileInfo&gt; files</Member>
+        <Member type="Constructor">public UserInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FileBackupInfo</Name>
+        <Access>Public</Access>
+        <Location left="224" top="12" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String backupId</Member>
+        <Member type="Field">public DateTime backupDate</Member>
+        <Member type="Field">public List&lt;HostAppDeviceInfo&gt; usedHosts</Member>
+        <Member type="Field">public List&lt;StorageDeviceInfo&gt; sourceDevices</Member>
+        <Member type="Field">public List&lt;FileInfo&gt; files</Member>
+        <Member type="Constructor">public FileBackupInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FileStreamInfo</Name>
+        <Access>Public</Access>
+        <Location left="1048" top="548" />
+        <Size width="162" height="286" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String streamId</Member>
+        <Member type="Field">public DateTime streamDate</Member>
+        <Member type="Field">public HostAppDeviceInfo usedHost</Member>
+        <Member type="Field">public StorageDeviceInfo sourceDevice</Member>
+        <Member type="Field">public String destinationIP</Member>
+        <Member type="Field">public List&lt;FileInfo&gt; files</Member>
+        <Member type="Constructor">public FileStreamInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>StorageDeviceInfo</Name>
+        <Access>Public</Access>
+        <Location left="589" top="618" />
+        <Size width="337" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String deviceId</Member>
+        <Member type="Field">public DateTime lastScannedDate</Member>
+        <Member type="Field">public HostAppDeviceInfo lastUsedHost</Member>
+        <Member type="Field">public List&lt;FileInfo&gt; files</Member>
+        <Member type="Field">public List&lt;FileBackupInfo&gt; filesBackupHere</Member>
+        <Member type="Constructor">public StorageDeviceInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>HostAppDeviceInfo</Name>
+        <Access>Public</Access>
+        <Location left="648" top="12" />
+        <Size width="360" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String hostDeviceId</Member>
+        <Member type="Field">public List&lt;StorageDeviceInfo&gt; storageDevicesAttached</Member>
+        <Member type="Field">public List&lt;FileStreamInfo&gt; filesStreamed</Member>
+        <Member type="Field">public HostAppType type</Member>
+        <Member type="Constructor">public HostAppDeviceInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FileInfo</Name>
+        <Access>Public</Access>
+        <Location left="545" top="252" />
+        <Size width="217" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String fileName</Member>
+        <Member type="Field">public String filePath</Member>
+        <Member type="Field">public StorageDeviceInfo device</Member>
+        <Member type="Field">public String hostAppId</Member>
+        <Member type="Field">public String fileSize</Member>
+        <Member type="Field">public String fileType</Member>
+        <Member type="Field">public String creationDate</Member>
+        <Member type="Field">public String modifyDate</Member>
+        <Member type="Field">public List&lt;FileBackupInfo&gt; backups</Member>
+        <Member type="Field">public List&lt;FileStreamInfo&gt; streams</Member>
+        <Member type="Constructor">public FileInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>FMSServerInfo</Name>
+        <Access>Public</Access>
+        <Location left="204" top="618" />
+        <Size width="355" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String serverId</Member>
+        <Member type="Field">public List&lt;StorageDeviceInfo&gt; storageDevicesAttached</Member>
+        <Member type="Field">public List&lt;HostAppDeviceInfo&gt; hostDevicesAttached</Member>
+        <Member type="Field">public List&lt;FileStreamInfo&gt; filesStreamed</Member>
+        <Member type="Field">public List&lt;FileBackupInfo&gt; fileBackedup</Member>
+        <Member type="Constructor">public FMSServerInfo()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>HostAppType</Name>
+        <Access>Public</Access>
+        <Location left="401" top="12" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>Android = 0</Value>
+        <Value>Win8 = 1</Value>
+        <Value>Win7 = 2</Value>
+        <Value>ubuntu = 3</Value>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="2" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>usedHost</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="2" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>sourceDevice</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>lastUsedHost</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>type</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartRole>device</StartRole>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
