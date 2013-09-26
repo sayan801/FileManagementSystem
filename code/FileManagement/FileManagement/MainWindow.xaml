@@ -27,6 +27,7 @@
             <Label Style="{StaticResource LblStyle}">Port : </Label>
             <TextBox Style="{StaticResource commonTBtyle}"></TextBox>
             <Button Style="{StaticResource PlainBtnStyle}">Connect</Button>
+            <Button Style="{StaticResource PlainBtnStyle}">Sync</Button>
             
         </UniformGrid>
         
