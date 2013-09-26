@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManagementUI", "FileMan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileManagementStyle", "FileManagementStyle\FileManagementStyle.csproj", "{DB1FA825-0972-4CD4-8762-39CC30741B40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSClassLibrary", "..\fm_ui\FMSClassLibrary\FMSClassLibrary.csproj", "{DB612AB2-0948-4277-BFE4-77EDD2FDFD18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMSClassLibrary", "FMSClassLibrary\FMSClassLibrary.csproj", "{DB612AB2-0948-4277-BFE4-77EDD2FDFD18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
