@@ -23,5 +23,11 @@ namespace FileManagement
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BrowserWindow browseWindow = new BrowserWindow();
+            browseWindow.Show();
+        }
     }
 }

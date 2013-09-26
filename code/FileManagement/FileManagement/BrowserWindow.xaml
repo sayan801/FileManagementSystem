@@ -1,0 +1,182 @@
+﻿<Window x:Class="FileManagement.BrowserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="File Management System" Height="600" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="File">
+                    <MenuItem Header="New Tab"></MenuItem>
+                    <MenuItem Header="Close Tab"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Show Command Prompt"></MenuItem>
+                    <MenuItem Header="Copy Folder Path"></MenuItem>
+                    <MenuItem Header="Copy File Path"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Set File Attribute"></MenuItem>
+                    <MenuItem Header="Delete"></MenuItem>
+                    <MenuItem Header="Delete Permannently"></MenuItem>
+                    <MenuItem Header="Rename"></MenuItem>
+                    <MenuItem Header="Properties"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Exit"></MenuItem>
+                </MenuItem> <!--End Of FILE-->
+
+                <MenuItem Header="Edit">
+                    <MenuItem Header="Undo"></MenuItem>
+                    <MenuItem Header="Redo"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Cut"></MenuItem>
+                    <MenuItem Header="Copy"></MenuItem>
+                    <MenuItem Header="Paste"></MenuItem>
+                    <MenuItem Header="Paste Shortcut"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Copy To Folder"></MenuItem>
+                    <MenuItem Header="Move To Folder"></MenuItem>                    
+                </MenuItem> <!--End of Menu-->
+                <MenuItem Header="Select">
+                    <MenuItem Header="Select All"></MenuItem>
+                    <MenuItem Header="Select None"></MenuItem>
+                    <MenuItem Header="Invert Selection"></MenuItem>
+                    <MenuItem Header="Select All Of Same Type"></MenuItem>
+                    <MenuItem Header="Wildcard Select"></MenuItem>
+                    <MenuItem Header="Wildcard Deselect"></MenuItem>
+                </MenuItem> <!--ENd Of Selct-->
+                <MenuItem Header="View">
+                    <MenuItem Header="Information Bar"></MenuItem>
+                    <MenuItem Header="Folders"></MenuItem>
+                    <MenuItem Header="Toolbar"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Extra Large Icon"></MenuItem>
+                    <MenuItem Header="Large Icon"></MenuItem>
+                    <MenuItem Header="Medium Icons"></MenuItem>
+                    <MenuItem Header="Small Icons"></MenuItem>
+                    <MenuItem Header="List"></MenuItem>
+                    <MenuItem Header="Tiles"></MenuItem>
+                    <MenuItem Header="Details"></MenuItem>
+                    <MenuItem Header="Thumbnails"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Auto Arrange"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Group By"></MenuItem>
+                    <MenuItem Header="Short By"></MenuItem>
+                    <MenuItem Header="Refresh"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Show Hidden File"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Filter"></MenuItem>
+                </MenuItem><!--End Of View-->
+                <MenuItem Header="Action">
+
+                    <MenuItem Header="New Folder"></MenuItem>
+                    <MenuItem Header="Create Shortcut"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Split File"></MenuItem>
+                    <MenuItem Header="Merge File"></MenuItem>
+                    <MenuItem Header="Destroy File"></MenuItem>
+                    <MenuItem Header="Upload File"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Send File">
+                        <MenuItem Header="To Removable Disc"></MenuItem>
+                        <MenuItem Header="Writable Disc"></MenuItem>
+                        <MenuItem Header="Bloothooth Device"></MenuItem>
+                        <MenuItem Header="Mail Recipient"></MenuItem>
+                        <MenuItem Header="Desktop"></MenuItem>
+                        <MenuItem Header="Zip Folder"></MenuItem>
+                    </MenuItem>
+                </MenuItem><!--End Of Action-->
+                <MenuItem Header="Bookmark">
+                    <MenuItem Header="Bookmark This Tab"></MenuItem>
+                    <MenuItem Header="Organize Bookmarks"></MenuItem>
+                    <Separator></Separator>
+                </MenuItem><!--End Of Bookmark-->
+                <MenuItem Header="Tool">
+                    <MenuItem Header="Search"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Duplicate Finder"></MenuItem>
+                    <MenuItem Header="Account Manager"></MenuItem>
+                    <MenuItem Header="Customize Folders"></MenuItem>
+                    <MenuItem Header="Options"></MenuItem>
+                </MenuItem><!--End Of Tool-->
+                <MenuItem Header="Go">
+                    <MenuItem Header="Back"></MenuItem>
+
+                    <MenuItem Header="Forward"></MenuItem>
+                    <MenuItem Header="Up One Level"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="My Computer"></MenuItem>
+                    <MenuItem Header="Desktop"></MenuItem>
+                    <MenuItem Header="My Documents"></MenuItem>
+                    <MenuItem Header="My Music"></MenuItem>
+                    <MenuItem Header="My Picture"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Control Panel"></MenuItem>
+
+                    <MenuItem Header="Printers"></MenuItem>
+                    <MenuItem Header="Network"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Recycle Bin"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Downloads"></MenuItem>
+                    <MenuItem Header="Temporary Folder"></MenuItem>
+                    <MenuItem Header="Temporary Brun Folder"></MenuItem>
+                </MenuItem><!--End Of Go-->
+                <MenuItem Header="Help">
+                    <MenuItem Header="Help"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="About File Manager++"></MenuItem>
+                </MenuItem><!--End Of Help-->
+
+            </Menu>
+            <ToolBar DockPanel.Dock="Top">
+                <Button >Back</Button>
+                <Button >Forward</Button>
+                <Separator></Separator>
+                <Button >Move Up</Button>
+                <Separator></Separator>
+                <Label>address</Label>
+                <TextBox Background="Azure" Width="350" HorizontalContentAlignment="Center">path</TextBox>
+                <Separator></Separator>
+                <TextBox Background="Azure" Width="150" HorizontalContentAlignment="Right">Search files</TextBox>
+
+            </ToolBar>
+
+
+            <ToolBar DockPanel.Dock="Top">
+                <Button >Create Library</Button>
+                <Separator></Separator>
+                <Button Name="importLibBtn" >Import Library</Button>
+                <Separator></Separator>
+                <Button Name="backupBtn" >Backup</Button>
+                <Separator></Separator>
+                <Button>Refresh Library</Button>
+                <Separator></Separator>
+                <Button>Starred</Button>
+                <Separator></Separator>
+                <Button>Settings</Button>
+                <Separator></Separator>
+                <Button>Upload to Web</Button>
+            </ToolBar>
+            
+            <StatusBar DockPanel.Dock="Bottom">
+                <Label>No files selected</Label>
+                <ProgressBar Width="200" Height="20"></ProgressBar>
+            </StatusBar>
+            <DockPanel DockPanel.Dock="Bottom" LastChildFill="True">
+                <DockPanel Name="navigatorSideBar" Width="150" DockPanel.Dock="Left" Background="#FFF2D9D9"></DockPanel>
+                <TextBlock DockPanel.Dock="Bottom" Name="informationBrowserTB"  Background="#FFB8EBB8">Information Browser</TextBlock>
+                <!--<ListView Name="mainView" DockPanel.Dock="Top">
+                    
+                </ListView>-->
+                <TabControl DockPanel.Dock="Top">
+                    <TabItem Header="tab 1"></TabItem>
+                    <TabItem Header="tab 2"></TabItem>
+                </TabControl>
+            </DockPanel>
+
+
+
+        </DockPanel>
+        
+    </Grid>
+</Window>
