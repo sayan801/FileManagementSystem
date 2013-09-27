@@ -11,6 +11,10 @@ namespace FMSClassLibrary
         static string passwordCurrent = "technicise";
         static string dbmsCurrent = "FMSdb";
 
+        /// <summary>
+        /// Opens the database connection.
+        /// </summary>
+        /// <returns></returns>
         private static MySql.Data.MySqlClient.MySqlConnection OpenDbConnection()
         {
             MySql.Data.MySqlClient.MySqlConnection msqlConnection = null;
@@ -198,6 +202,10 @@ namespace FMSClassLibrary
         {
             return QueryAllDeviceList();
         }
+        /// <summary>
+        /// Queries all device list.
+        /// </summary>
+        /// <returns></returns>
         private static List<StorageDeviceInfo> QueryAllDeviceList()
         {
             List<StorageDeviceInfo> DeviceList = new List<StorageDeviceInfo>();
